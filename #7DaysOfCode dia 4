@@ -1,20 +1,26 @@
 
-
-let chute = prompt("Digite um número de 0 a 10");
   
 let computer = Math.floor(Math.random() * (10 - 0 + 1) + 1)
 
-let contador = 1;
+let rodada = 1; //
 
-console.log(computer);
+let tentativas = 3;
 
-do {
-  let chute = prompt("Digite um número de 0 a 10");
-  {if (chute == computer)
-    alert("ACERTOU")
+
+
+while (rodada < tentativas) {
+  console.log("tentativa " + rodada + " de " + tentativas) //mostrador de tentativas
+  let chute = prompt("Digite um número de 0 a 10"); 
+  if (chute == computer){
+    alert("ACERTOU");
+    break;}
   else
-    alert("ERROU")
+    {alert("ERROU")}
+    rodada++
 }
-} while (++contador < 3);
 
-console.log("O número correto era " + computer)
+
+
+
+console.log("O número correto é " + computer)
+  
